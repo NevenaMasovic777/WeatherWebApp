@@ -1,5 +1,3 @@
-console.log("Something");
-
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 let locationField = document.querySelector("#location");
