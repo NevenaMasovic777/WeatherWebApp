@@ -12,6 +12,8 @@ weatherForm.addEventListener("submit", (e) => {
   if (location === "") {
     console.log("provide search value");
     errorField.textContent = "Provide search value";
+    locationField.textContent = '';
+    weatherField.textContent = '';
     return;
   } 
   fetch(`/weather?location=${location}`).then((res) => {
