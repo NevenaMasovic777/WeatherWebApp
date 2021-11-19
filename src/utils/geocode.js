@@ -11,7 +11,7 @@ const getGeolocation = (address, callback) => {
                 callback('Unable to reach server', null); //data je null
             }
             else if (!body.features.length) {
-                callback('incorrect location, try another search', null);
+                callback('Incorrect location, try another search', null);
             }
             else {
                 callback(null, { //prosledjujemo data nazad u geoLocation, error je null

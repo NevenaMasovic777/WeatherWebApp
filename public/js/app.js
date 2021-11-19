@@ -11,7 +11,7 @@ weatherForm.addEventListener("submit", (e) => {
   
   if (location === "") {
     console.log("provide search value");
-    errorField.textContent = "Provide search value";
+    errorField.textContent = "Location must be provided";
     locationField.textContent = '';
     weatherField.textContent = '';
     return;
