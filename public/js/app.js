@@ -4,6 +4,7 @@ let locationField = document.querySelector("#location");
 let weatherField = document.querySelector("#weather");
 let errorField = document.querySelector("#error");
 
+
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const location = search.value;
@@ -13,7 +14,7 @@ weatherForm.addEventListener("submit", (e) => {
     errorField.textContent = "Provide search value";
     return;
   } 
-  fetch(`http://localhost:3000/weather?location=${location}`).then((res) => {
+  fetch(`/weather?location=${location}`).then((res) => {
     res.json().then((resp) => {
       if (resp.error) {
         console.log(resp.error);
