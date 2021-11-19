@@ -14,13 +14,7 @@ weatherForm.addEventListener("submit", (e) => {
     errorField.textContent = "Provide search value";
     return;
   } 
-  fetch(`/weather?location=${location}`,{
-    headers : { 
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-     }
-
-    }).then((res) => {
+  fetch(`/weather?location=${location}`).then((res) => {
     res.json().then((resp) => {
       if (resp.error) {
         console.log(resp.error);
