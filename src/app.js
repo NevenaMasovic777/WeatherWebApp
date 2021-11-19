@@ -34,7 +34,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: "About",
-        message: "This is page about something",
+        message: "This is page about weather forecast in different locations",
         name: "Nevena"
     })
 })
